@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
   compileSdkVersion 28
@@ -42,9 +45,11 @@ android {
 }
 
 dependencies {
+  implementation deps.kotlin
+
   implementation deps.dagger
-  annotationProcessor deps.daggerCompiler
+  kapt deps.daggerCompiler
 
   implementation project(':inflation-inject')
-  annotationProcessor project(':inflation-inject-processor')
+  kapt project(':inflation-inject-processor')
 }

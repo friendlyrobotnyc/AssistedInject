@@ -1,11 +1,11 @@
 buildscript {
   ext.versions = [
-      'kotlin': '1.2.71',
+      'kotlin': '1.3.0',
   ]
 
   ext.deps = [
-      'dagger': 'com.google.dagger:dagger:2.17',
-      'daggerCompiler': 'com.google.dagger:dagger-compiler:2.17',
+      'dagger': 'com.google.dagger:dagger:2.19',
+      'daggerCompiler': 'com.google.dagger:dagger-compiler:2.19',
       'autoService': 'com.google.auto.service:auto-service:1.0-rc4',
       'autoCommon': 'com.google.auto:auto-common:0.10',
       'junit': 'junit:junit:4.12',
@@ -23,7 +23,7 @@ buildscript {
 
   dependencies {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
-    classpath 'com.android.tools.build:gradle:3.3.0-alpha13'
+    classpath 'com.android.tools.build:gradle:3.3.0-rc03'
   }
 
   repositories {
