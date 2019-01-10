@@ -9,15 +9,15 @@ class MainActivity : Activity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    val factory = DaggerMainActivity_MainComponent.create()
+    val factory = DaggerMainComponent.create()
         .factory()
     layoutInflater.factory = factory
 
     setContentView(R.layout.custom_view)
   }
+}
 
-  @Component(modules = arrayOf(ViewModule::class))
-  internal interface MainComponent {
-    fun factory(): InflationInjectFactory
-  }
+@Component(modules = arrayOf(ViewModule::class))
+interface MainComponent {
+  fun factory(): InflationInjectFactory
 }
